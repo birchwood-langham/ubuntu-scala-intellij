@@ -1,4 +1,4 @@
-FROM birchwoodlangham/ubuntu-scala:2.12.3
+FROM birchwoodlangham/ubuntu-scala:latest
 
 # install zsh, python pip etc.
 RUN apt-get update && \
@@ -30,9 +30,9 @@ RUN git clone https://github.com/powerline/fonts.git && \
     git clone https://github.com/VundleVim/Vundle.vim.git /home/user/.vim/bundle/Vundle.vim && \
     vim +PluginInstall +qall && \
     mkdir idea && \
-    wget https://download.jetbrains.com/idea/ideaIU-2017.2.1-no-jdk.tar.gz && \
-    tar -C idea -zxf ideaIU-2017.2.1-no-jdk.tar.gz --strip-components=1 && \
-    rm ideaIU-2017.2.1-no-jdk.tar.gz
+    wget https://download.jetbrains.com/idea/ideaIU-2017.2.5-no-jdk.tar.gz && \
+    tar -C idea -zxf ideaIU-2017.2.5-no-jdk.tar.gz --strip-components=1 && \
+    rm ideaIU-2017.2.5-no-jdk.tar.gz
 
 # copy configuration files for vim, zsh and tmux
 COPY vimrc /home/user/.vimrc
