@@ -30,14 +30,14 @@ RUN git clone https://github.com/powerline/fonts.git && \
     git clone https://github.com/VundleVim/Vundle.vim.git /home/user/.vim/bundle/Vundle.vim && \
     vim +PluginInstall +qall && \
     mkdir idea && \
-    wget https://download.jetbrains.com/idea/ideaIU-2017.2.5-no-jdk.tar.gz && \
-    tar -C idea -zxf ideaIU-2017.2.5-no-jdk.tar.gz --strip-components=1 && \
-    rm ideaIU-2017.2.5-no-jdk.tar.gz
+    wget https://download.jetbrains.com/idea/ideaIU-2017.3.4-no-jdk.tar.gz && \
+    tar -C idea -zxf ideaIU-2017.3.4-no-jdk.tar.gz --strip-components=1 && \
+    rm ideaIU-2017.3.4-no-jdk.tar.gz
 
 # copy configuration files for vim, zsh and tmux
 COPY vimrc /home/user/.vimrc
 
-VOLUME ["/home/user/code", "/home/user/.m2", "/home/user/.ivy2", "/home/user/.IntelliJIdea2017.2"]
+VOLUME ["/home/user/code", "/home/user/.m2", "/home/user/.ivy2", "/home/user/.IntelliJIdea2017.3"]
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ENV DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
